@@ -6,7 +6,7 @@ def go(dir):
 def take(item):
     if uinput.split()[0].lower() == "take":
         item = uinput.split()[1]
-        if item == items[list(rooms.keys())[list(rooms.values()).index(item)]] #idk i just copied it from https://stackoverflow.com/questions/8023306/get-key-by-value-in-dictionary
+        if item == items[currentroom] 
             inventory.append(item)
 def look():
     if uinput.split()[0].lower == 'look':

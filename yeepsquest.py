@@ -21,7 +21,7 @@ To the north you see a rusty shed, and to the east you see woods.
                 
 #commands
 def uproom(): #TODO this
-    curre
+    currentroom = list(rooms.keys())[list(rooms.values()).index(position)] #idk i just copied it from https://stackoverflow.com/questions/8023306/get-key-by-value-in-dictionary
 
 #TODO: take, attack, use
 #TODO: hangman? other modes? how do you win?
@@ -35,13 +35,15 @@ def main():
         get()
         take()
         go()
+        uproom()
     if mode == 2:
           print('GAME OVER\n')
           if input('play again? [Y/N}:').lower() == 'y':
-              #TODO: this
+              print("oops, you can't yet") #TODO thiiiiiis
+          else:
+          break
     elif mode == 3:
           print('YOU WIN!')
           break
           
-return 0
 main()
