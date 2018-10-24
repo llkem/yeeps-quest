@@ -1,3 +1,4 @@
+from yeepsquest import inventory, currentroom
 def go(dir):
     if uinput == "go".lower() + 'N'.lower() or "go".lower() + 'E'.lower() or "go".lower() + 'S'.lower() or "go".lower() + 'W'.lower():
         dir = uinput.split()[1]
@@ -6,7 +7,7 @@ def go(dir):
 def take(item):
     if uinput.split()[0].lower() == "take":
         item = uinput.split()[1]
-        if item == items[currentroom] 
+        if item == items[currentroom]:
             inventory.append(item)
 def look():
     if uinput.split()[0].lower == 'look':

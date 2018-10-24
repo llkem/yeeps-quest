@@ -1,10 +1,11 @@
 import random
 from parse import *
+import sys
 #made by Ryan
 
 #variables
 position = [0,0]
-currentroom
+currentroom = 'plains'
 rooms = {'plains':[0,0],'woods1':[1,0],'shed':[0,1],'creek':[1,1],'dungeonentr':[0,2]}
 mode = 0
 hp = 4
@@ -16,7 +17,9 @@ sheditems = {'sword', 'key'}
 descriptions = {'plains':"""you stand in the middle of windy plains.\n
 To the north you see a rusty shed, and to the east you see woods.
 \n at your feet you see a note.""",
-                'woods1':
+                'woods1': """You stand in the middle of some woods. there's not much here, just some trees and stuff.""",
+                'shed':"""you are in a rusty shed, with a filthy matress under your feet. Underneath the mattress is a key!"""
+                }
                 
                 
 #commands
@@ -29,9 +32,9 @@ def uproom(): #TODO this
     
 #main loop
 def main():
-    print("Welcome to yeep\'s quest! you are yeep, a lone adventurer with flowing golden hair.\n"
+    print("Welcome to yeep\'s quest! you are yeep, a lone adventurer with flowing golden hair.\n")
     while mode == 0 or mode == 1:
-        parse()
+        #parse.parse()
         get()
         take()
         go()
@@ -41,9 +44,9 @@ def main():
           if input('play again? [Y/N}:').lower() == 'y':
               print("oops, you can't yet") #TODO thiiiiiis
           else:
-          break
+            sys.exit(0)
     elif mode == 3:
           print('YOU WIN!')
-          break
+          sys.exit(0)
           
 main()
